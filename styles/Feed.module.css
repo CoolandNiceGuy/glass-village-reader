@@ -1,0 +1,84 @@
+.feed{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  width: 80%;
+}
+
+.feedItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  flex-direction: row;
+}
+
+.contentSnippet{
+  color: #008F11;
+  padding: 1rem;
+  width: 80%;
+}
+
+.headLine{
+  align-self: flex-start;
+}
+
+.creatorTag{
+  border: solid#00FF41 1px;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  padding: 0.25rem;
+  color: #00FF41;
+  justify-content: center;
+  width: 100%;
+}
+
+.itemInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pubDate{
+  color: #00FF41;
+}
+
+.itemButtom{
+  border: 0px;
+  background-color: transparent;
+  color: #00FF41;
+  height: 100%;
+  cursor: pointer;
+}
+
+.extrasContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  width: 15%;
+}
+
+.feedItem:hover{
+  background-color: #003B00;
+}
+
+.itemButtom:hover{
+  color:#008F11;
+}
+
+@media only screen and (max-width: 600px) {
+  .creatorTag{
+    display: none;
+  }
+
+  .feed{
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+}
