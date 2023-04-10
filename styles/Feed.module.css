@@ -12,12 +12,30 @@
   justify-content: space-between;
   margin: 1rem;
   flex-direction: row;
+  padding: .5rem;
+}
+
+.title{
+  /* font-size: 24px; */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+}
+
+.titleLink{
+  inline-size: 75%;
+}
+
+.titleLink:visited{
+  color: aquamarine;
 }
 
 .contentSnippet{
   color: #008F11;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-left: 2rem;
   width: 80%;
+  border-left: solid 2px;
+  font-size: large;
 }
 
 .headLine{
@@ -32,7 +50,9 @@
   padding: 0.25rem;
   color: #00FF41;
   justify-content: center;
-  width: 100%;
+  font-size: clamp(12px, 18px, 24px);
+  min-width: 100%;
+  text-align: center;
 }
 
 .itemInfo{
@@ -52,6 +72,7 @@
   color: #00FF41;
   height: 100%;
   cursor: pointer;
+  margin-left: .75rem;
 }
 
 .extrasContainer{
@@ -70,6 +91,11 @@
   color:#008F11;
 }
 
+.contentSnippet::selection{
+  color: #0d0208;
+  background-color: #00FF41;
+}
+
 @media only screen and (max-width: 600px) {
   .creatorTag{
     display: none;
@@ -81,4 +107,62 @@
     padding-right: .5rem;
   }
 
+  .feedItem:hover{
+    background-color: transparent;
+  }
+
+  .extrasContainer{
+    width: auto;
+  }
+
+}
+
+/* animation testing APPEAR */
+.MyClassAppear{
+  /* opacity: 0.01; */
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.MyClassAppearActive{
+  max-height: 800px;
+  transition: max-height 800ms cubic-bezier(0.39, 0.575, 0.565, 1);;
+}
+
+.MyClassAppearDone{
+  max-height: 800px;
+  overflow: hidden;
+}
+
+/* animation testing ENTER TRANSITION */
+.MyClassEnter{
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.MyClassEnterActive{
+  max-height: 800px;
+  transition: max-height 800ms cubic-bezier(0.39, 0.575, 0.565, 1);;
+}
+
+.MyClassEnterDone{
+  max-height: 800px;
+  overflow: hidden;
+}
+
+/* animation testing EXIT TRANSITION */
+.MyClassExit{
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.MyClassExitActive{
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 800ms cubic-bezier(0.39, 0.575, 0.565, 1);;
+}
+
+.MyClassExitDone{
+  overflow: hidden;
+  max-height: 0px;
 }

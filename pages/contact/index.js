@@ -1,10 +1,17 @@
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import MobileHeader from "@/components/MobileHeader/MobileHeader";
+import Head from "next/head";
 
 const Contact = () => {
   return ( 
     <div>
+      <Head>
+        <title>Contact</title>
+      </Head>
       <Header/>
-      Contact Page Contents
+      <MobileHeader/>
+      <Footer/>
     </div>
    );
 }

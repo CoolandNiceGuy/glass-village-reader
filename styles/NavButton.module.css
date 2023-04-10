@@ -1,3 +1,24 @@
 .navButton{
-  background: green;
+  border: solid #00ff40 1px;
+  transform: skew(20deg);
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding: .25rem;
+
+  width: 5rem;
+  text-align: center;
+}
+
+.title{
+  transform: skew(-20deg);
+  display: inline-block;
+  color: #00ff40;
+}
+
+.navButton:hover{
+  background-color: rgba(0, 255, 64, 0.5);
+}
+
+.navButton:hover .title{
+  color: #0D0208;
 }

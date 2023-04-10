@@ -21,7 +21,7 @@ const Header = ({setFilterFunction}) => {
             <NavButton title='Contact'></NavButton>
           </Link>
         </div>
-        <Search filterFunction={setFilterFunction}/>
+        <Search filterFunction={setFilterFunction} onClickOutside={() => {}}/>
       </div>
     </div>
    );
